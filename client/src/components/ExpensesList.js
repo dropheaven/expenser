@@ -1,7 +1,7 @@
 import React from 'react';
 import ExpenseItem from './ExpenseItem';
 
-class ExpensesContainer extends React.Component {
+class ExpensesList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,4 +37,4 @@ class ExpensesContainer extends React.Component {
   }
 }
 
-export default ExpensesContainer;
+export default ExpensesList;
