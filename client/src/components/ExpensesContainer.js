@@ -1,4 +1,5 @@
 import React from 'react';
+import ExpenseItem from './ExpenseItem';
 
 class ExpensesContainer extends React.Component {
   constructor(props) {
@@ -13,7 +14,6 @@ class ExpensesContainer extends React.Component {
       .then(response => response.json())
       .then(expenses => {
         this.setState({ expenses })
-        console.log(this.state.expenses)
       })
   }
 
@@ -22,7 +22,15 @@ class ExpensesContainer extends React.Component {
       <div>
         Expenses
         <ul>
-          {this.state.expenses.map(expense => <li key={expense.id}>{expense.title}</li>)}
+          {this.state.expenses.map(({ id, title, amount, due_date }) => (
+            <li key={id}>
+              <ExpenseItem
+                title={title}
+                amount={amount}
+                dueDate={due_date}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     )
