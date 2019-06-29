@@ -1,7 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+first_user = User.create(full_name: "first user", email: "first@email.com", password: "password")
+first_user.expenses.create( title: 'Electricity', amount: 80, due_date: 'July 2, 2019')
+first_user.expenses.create( title: 'Phone', amount: 60, due_date: 'June 28, 2019')
+first_user.expenses.create(title: 'Rent', amount: 1600, due_date: 'September 15, 2019')
+first_user.expenses.create(title: 'Credit card', amount: 204, due_date: 'April 21, 2019')
+
+saad = User.create(full_name: "saad", email: "saad@email.com", password: "password")
+saad.expenses.create( title: 'Metrocard', amount: 130, due_date: 'July 18, 2019')
+saad.expenses.create( title: 'Groceries', amount: 40, due_date: 'June 19, 2019')
+saad.expenses.create(title: 'Water', amount: 300, due_date: 'November 15, 2019')
+saad.expenses.create(title: 'Rent', amount: 1200, due_date: 'August 1, 2019')
+
+lisa = User.create(full_name: "lisa", email: "lisa@email.com", password: "password")
+lisa.expenses.create( title: 'Internet', amount: 60, due_date: 'June 8, 2019')
+lisa.expenses.create( title: 'Mortgage', amount: 700, due_date: 'July 25, 2019')
