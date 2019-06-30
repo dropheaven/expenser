@@ -17,17 +17,17 @@ body {
 }
 
 /* ------------------------------------ Sidebar --------------------------------------------- */
-#sidebar {
+#sidebar-container {
   background: #333;
   color: #ffe260;
 }
 
-#sidebar a {
+#sidebar-container a {
   font-size: 1.1rem;
   color: #fff;
 }
 
-#sidebar a:hover {
+#sidebar-container a:hover {
   color: #ffe260;
   transform: scale(1.2);
   text-decoration: none;
