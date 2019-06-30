@@ -8,10 +8,10 @@ const AppRouter = () => (
   <Router>
     <div className="container-fluid">
       <div className="row">
-        <div className="col-2 pl-0">
+        <div className="col-2 pl-0 pr-0">
           <Sidebar />
         </div>
-        <div className="col-10" id="main-container">
+        <div className="col-10 pl-0" id="main-container">
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route component={NotFound} />
