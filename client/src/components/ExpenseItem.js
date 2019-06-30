@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 const ExpenseItem = ({ title, amount, dueDate }) => {
   return (
@@ -7,7 +8,7 @@ const ExpenseItem = ({ title, amount, dueDate }) => {
       <div className="card-header bg-transparent border-dark">{title}</div>
       <div className="card-body">
         <h4 className="card-title">${amount}</h4>
-        <p className="card-text">Due on {dueDate}</p>
+        <p className="card-text">Due on {moment(dueDate).format("MMM Do, YYYY")}</p>
       </div>
       <div className="card-footer bg-transparent border-dark">
         <Link to={`/expenses/${title}`}>
