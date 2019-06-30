@@ -11,10 +11,10 @@ const ExpenseItem = ({ title, amount, dueDate }) => {
       </div>
       <div className="card-footer bg-transparent border-dark">
         <Link to={`/expenses/${title}`}>
-          <button type="button" className="btn btn-primary">details</button>
+          <button type="button" className="btn btn-primary" id="primary-button">details</button>
         </Link>
         <Link to={`/expenses/${title}/edit`}>
-          <button type="button" className="btn btn-primary">edit</button>
+          <button type="button" className="btn btn-primary" id="primary-button">edit</button>
         </Link>
       </div>
     </div>
