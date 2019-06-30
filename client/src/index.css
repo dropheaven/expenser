@@ -21,6 +21,13 @@ body {
   text-decoration: none;
 }
 
-#main-container {
-  border: 1px solid red;
+/* ------------------------------------ Expense Card --------------------------------------------- */
+#expenses-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#expense-card {
+  width: 16rem;
 }
