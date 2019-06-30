@@ -1,5 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+/* ------------------------------------ Sidebar --------------------------------------------- */
 #sidebar {
-  border: 1px solid black;
+  background: #333;
+  color: #ffe260;
+}
+
+#sidebar a {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+#sidebar a:hover {
+  color: #ffe260;
+  transform: scale(1.2);
+  text-decoration: none;
 }
 
 #main-container {
