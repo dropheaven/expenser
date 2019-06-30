@@ -19,19 +19,16 @@ class ExpensesList extends React.Component {
 
   render() {
     return (
-      <div>
-        Expenses
-        <ul>
-          {this.state.expenses.map(({ id, title, amount, due_date }) => (
-            <li key={id}>
-              <ExpenseItem
-                title={title}
-                amount={amount}
-                dueDate={due_date}
-              />
-            </li>
-          ))}
-        </ul>
+      <div id="expenses-list">
+        {this.state.expenses.map(({ id, title, amount, due_date }) => (
+          <React.Fragment key={id}>
+            <ExpenseItem
+              title={title}
+              amount={amount}
+              dueDate={due_date}
+            />
+          </React.Fragment>
+        ))}
       </div>
     )
   }
