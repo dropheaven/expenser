@@ -6,25 +6,27 @@ class Login extends React.Component {
     password: ''
   }
 
-  onEmailChange = e => {
-    this.setState({ email: e.target.value })
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value })
   }
 
-  onPasswordChange = e => {
-    this.setState({ password: e.target.value })
+  handleSubmit = e => {
+
   }
 
   render() {
     return (
       <div className="container w-50 mt-5">
         <h3>Login</h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input
               type="text"
+              name="email"
               placeholder="enter email"
               value={this.state.email}
-              onChange={this.onEmailChange}
+              onChange={this.handleChange}
               autoFocus
               required
               className="form-control"
@@ -33,9 +35,10 @@ class Login extends React.Component {
           <div className="form-group">
             <input
               type="password"
+              name="password"
               placeholder="enter password"
               value={this.state.password}
-              onChange={this.onPasswordChange}
+              onChange={this.handleChange}
               required
               className="form-control"
             />
@@ -43,7 +46,7 @@ class Login extends React.Component {
           <button className="btn btn-primary" id="primary-button">submit</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
